@@ -1,0 +1,12 @@
+
+services:
+  racket:
+    build:
+      context: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    user: "${UID:-1000}:${GID:-1000}"
+    stdin_open: true
+    tty: true
+
